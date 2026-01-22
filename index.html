@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date and Factorial</title>
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<script>
+function dateShow() {
+  var d = new Date();
+  document.getElementById("out").innerHTML =
+    (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear();
+}
+
+function factCal() {
+  var n = prompt("Enter number");
+  var f = 1;
+
+  if (n < 0 || n == "") {
+    alert("Invalid number");
+    return;
+  }
+
+  for (var i = 1; i <= n; i++) {
+    f = f * i;
+  }
+
+  alert("Factorial is " + f);
+}
+</script>
+
+<div class="main">
+  <button onclick="dateShow()">Display Date</button>
+  <div id="out"></div>
+  <button onclick="factCal()">Factorial</button>
+</div>
+
+</body>
+</html>
